@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/heroicons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "source": "src/index.tsx",
   "repository": "git@github.com:ds-pack/heroicons.git",
@@ -27,7 +27,6 @@
     "react": "^16.13.1"
   },
   "scripts": {
-    "prepare": "yarn build",
     "build": "yarn build-outline && yarn build-solid && yarn build-react",
     "build-react": "node ./scripts/build-react.js",
     "postbuild-react": "babel --extensions \".tsx\" react --out-dir dist/",
@@ -43,6 +42,7 @@
   "files": [
     "react/",
     "outline/",
-    "solid/"
+    "solid/",
+    "dist/"
   ]
 }
