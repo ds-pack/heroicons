@@ -2,6 +2,9 @@
   "name": "@ds-pack/heroicons",
   "version": "0.0.1",
   "main": "dist/index.js",
+  "source": "src/index.tsx",
+  "repository": "git@github.com:ds-pack/heroicons.git",
+  "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -29,7 +32,13 @@
     "build-react": "node ./scripts/build-react.js",
     "postbuild-react": "babel --extensions \".tsx\" react --out-dir dist/",
     "build-outline": "svgo --config=svgo.outline.yaml -f ./src/outline -o ./outline --pretty --indent=2",
-    "build-solid": "svgo --config=svgo.solid.yaml -f ./src/solid -o ./solid --pretty --indent=2"
+    "build-solid": "svgo --config=svgo.solid.yaml -f ./src/solid -o ./solid --pretty --indent=2",
+    "prepub": "yarn build",
+    "pub": "yarn publish --access public"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "files": [
     "react/",
