@@ -2,7 +2,7 @@
   "name": "@ds-pack/heroicons",
   "version": "0.0.2",
   "main": "dist/index.js",
-  "source": "src/index.tsx",
+  "source": "react/index.tsx",
   "repository": "git@github.com:ds-pack/heroicons.git",
   "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
   "license": "MIT",
