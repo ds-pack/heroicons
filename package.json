@@ -1,30 +1,38 @@
 {
-  "name": "heroicons",
-  "version": "0.3.7",
-  "main": "index.js",
+  "name": "@ds-pack/heroicons",
+  "version": "0.0.1",
+  "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/plugin-transform-typescript": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
     "@svgr/cli": "^5.4.0",
     "@svgr/core": "^5.4.0",
-    "@vue/compiler-dom": "^3.0.0-beta.14",
     "camelcase": "^6.0.0",
     "dedent": "^0.7.0",
     "rimraf": "^3.0.2",
-    "svg-to-vue": "^0.7.0",
-    "svgo": "^1.3.2",
-    "vue-template-compiler": "^2.6.11"
+    "svgo": "^1.3.2"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "7.11.2",
+    "react": "^16.13.1"
   },
   "scripts": {
-    "prepare": "npm run build",
-    "build": "npm run build-outline && npm run build-solid && npm run build-react && npm run build-vue",
+    "prepare": "yarn build",
+    "build": "yarn build-outline && yarn build-solid && yarn build-react",
     "build-react": "node ./scripts/build-react.js",
-    "build-vue": "node ./scripts/build-vue.js",
+    "postbuild-react": "babel --extensions \".tsx\" react --out-dir dist/",
     "build-outline": "svgo --config=svgo.outline.yaml -f ./src/outline -o ./outline --pretty --indent=2",
     "build-solid": "svgo --config=svgo.solid.yaml -f ./src/solid -o ./solid --pretty --indent=2"
   },
   "files": [
     "react/",
-    "vue/",
     "outline/",
     "solid/"
   ]

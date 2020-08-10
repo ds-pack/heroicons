@@ -1,10 +1,15 @@
-# Heroicons
+# `@ds-pack/heroicons`
 
-A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.
+This package is a fork / extension on top of the excellent
+[Tailwind Heroicons](https://github.com/tailwindlabs/heroicons) project!
+
+A set of free MIT-licensed high-quality SVG icons for you to use in your web
+projects.
 
 140 icons per style currently, more to come in the future.
 
-[Preview and search at Heroicons.dev](https://heroicons.dev) _(Made by @codex-zaydek)_
+[Preview and search at Heroicons.dev](https://heroicons.dev) _(Made by
+@codex-zaydek)_
 
 ### Outline style
 
@@ -20,10 +25,17 @@ Smaller 20x20 icons drawn with fills.
 
 ### Usage
 
-To use these icons, simply copy the source for the icon you need (from the `outline` or `solid` directories, not the `src` directory) and inline it directly into your HTML:
+To use these icons, simply copy the source for the icon you need (from the
+`outline` or `solid` directories, not the `src` directory) and inline it
+directly into your HTML:
 
 ```html
-<svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<svg
+  class="h-6 w-6 text-gray-500"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+>
   <path
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -33,4 +45,6 @@ To use these icons, simply copy the source for the icon you need (from the `outl
 </svg>
 ```
 
-Both icon styles are preconfigured to be stylable by setting the `color` CSS property, either manually or using utility classes like `text-gray-500` in a framework like [Tailwind CSS](https://tailwindcss.com).
+Both icon styles are preconfigured to be stylable by setting the `color` CSS
+property, either manually or using utility classes like `text-gray-500` in a
+framework like [Tailwind CSS](https://tailwindcss.com).
