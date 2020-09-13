@@ -1,6 +1,6 @@
 {
   "name": "@ds-pack/heroicons",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "source": "react/index.tsx",
   "repository": "git@github.com:ds-pack/heroicons.git",
